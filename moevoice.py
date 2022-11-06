@@ -3,9 +3,9 @@ from hoshino import Service, priv
 from hoshino.typing import CQEvent
 from typing import Union
 import re
-import aiohttp, base64, time, random, hashlib, json
+import aiohttp, base64, time, random, hashlib
 from .MoeGoe.MoeGoe import get_moegoe
-import os, websockets
+import os
 
 sv_help = '''
 - 让[宁宁|爱瑠|芳乃|茉子|丛雨|小春|七海]说

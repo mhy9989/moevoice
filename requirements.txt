@@ -6,6 +6,4 @@ torch
 Unidecode
 openjtalk>=0.3.0.dev2
 jamo
-websockets
-hashlib
 typing
