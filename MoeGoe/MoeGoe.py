@@ -47,7 +47,6 @@ def get_speaker_id(message):
     return speaker_id
 
 dir_path = os.path.dirname(__file__)
-help_path = os.path.join(os.path.dirname(__file__), 'nshelp.jpg')
 
 async def get_moegoe(speaker_id,text,type=0):
     if type==0:
