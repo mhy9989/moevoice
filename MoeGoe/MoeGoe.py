@@ -50,13 +50,13 @@ dir_path = os.path.dirname(__file__)
 
 async def get_moegoe(speaker_id,text,type=0):
     if type==0:
-        model = os.path.join(dir_path, 'G_851000.pth')
+        model = os.path.join(dir_path, os.path.join('model','G_851000.pth'))
         config = os.path.join(dir_path, 'meishi.json')
     elif type==1:
-        model = os.path.join(dir_path, 'G_510000.pth')
+        model = os.path.join(dir_path, os.path.join('model','G_510000.pth'))
         config = os.path.join(dir_path, 'haopengyou.json')
     elif type==2:
-        model = os.path.join(dir_path, 'G_809000.pth')
+        model = os.path.join(dir_path, os.path.join('model','G_809000.pth'))
         config = os.path.join(dir_path, 'genshin.json')
     hps_ms = utils.get_hparams_from_file(config)
     if type == 2:

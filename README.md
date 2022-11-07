@@ -9,7 +9,15 @@
 
 1. 将该项目放在HoshinoBot插件目录 `modules` 下，或者clone本项目 `git clone https://github.com/mhy9989/moevoice`
 
-2. 进入到`moevoice`目录下，使用`pip install -r "requirements.txt"`安装依赖
+2. 通过百度网盘下载语音模型包`model.zip`，将解压后的文件夹`model`放入`moevoice\MoeGoe`目录内
+
+![](.\path.png)
+
+   链接：https://pan.baidu.com/s/12FOAkb3HwOQoNNHEwvNgBg?pwd=gpiq 
+   提取码：gpiq 
+
+3. 在`moevoice`目录下，使用`pip install -r "requirements.txt"`安装依赖
+
 
 3. 在 `config/__bot__.py` 模块列表中添加 `moevoice`
 
