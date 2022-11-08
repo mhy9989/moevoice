@@ -11,7 +11,7 @@
 
 2. 通过百度网盘下载语音模型包`model.zip`，将解压后的文件夹`model`放入`moevoice\MoeGoe`目录内
 
-![](.\path.png)
+![](https://github.com/mhy9989/moevoice/path.png)
 
    链接：https://pan.baidu.com/s/12FOAkb3HwOQoNNHEwvNgBg?pwd=gpiq 
    提取码：gpiq 
