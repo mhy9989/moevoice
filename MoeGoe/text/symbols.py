@@ -12,8 +12,14 @@ _py = ['sh', 'uo1', 'i3', 'ai2', 'i4', 'en2', 'en4', 'zh', 'eng3', 'ing4', 'i1',
 
 _zhpunc = '！，、。？—…“”《》：+（）「」~；·・'
 
+# zh_ja_mixture_cleaners
+_pad2        = '_'
+_punctuation2 = ',.!?-~…'
+_letters2 = 'AEINOQUabdefghijklmnoprstuvwyzʃʧʦɯɹəɥ⁼ʰ`→↓↑ '
+
 # Export all symbols:
 symbols = [_pad] + list(_punctuation) + list(_letters) + list(_letters_ipa) + list(_numbers) + list(_zhpunc) + _py
-
+symbols2 = [_pad2] + list(_punctuation2) + list(_letters2)
 # Special symbol ids
 SPACE_ID = symbols.index(" ")
+SPACE_ID2 = symbols2.index(" ")

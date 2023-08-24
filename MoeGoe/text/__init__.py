@@ -12,9 +12,12 @@ def text_to_sequence(text, symbols, cleaner_names,type=1):
       List of integers corresponding to the symbols in the text
   '''
   _symbol_to_id = {s: i for i, s in enumerate(symbols)}
-  sequence = []
-  clean_text = _clean_text(text, cleaner_names)
+  _id_to_symbol = {i: s for i, s in enumerate(symbols)}
   if type == 1: 
+
+    sequence = []
+
+    clean_text = _clean_text(text, cleaner_names)
     for symbol in clean_text:
       if symbol not in _symbol_to_id.keys():
         continue
@@ -22,6 +25,8 @@ def text_to_sequence(text, symbols, cleaner_names,type=1):
       sequence += [symbol_id]
     return sequence
   elif type == 2:
+    sequence = []
+    clean_text = _clean_text(text, cleaner_names)
     return cleaned_text_to_sequence(clean_text,_symbol_to_id)
 
 

@@ -26,14 +26,17 @@ sv_help = '''
   希莉奴|菈菈|沙姫|春菜|ルン|芽衣|恭子|里纱|
   未央|提亚悠九条凛|藤崎绫|结城华|涼子|アゼンダ|梨子|
   梨斗|佩凯|健一|レン|校长]说
-- 让[美羽|梓|艾莉娜|莉音|尼古拉|小夜|夕里|萌香|安娜|直太|兵马|元树]说
+- 让[美羽|布良梓|艾莉娜|莉音|尼古拉|小夜|夕里|萌香|安娜|直太|兵马|元树]说
 - 让[夏目|栞那|希|爱衣|凉音]说
 - 让[姬爱|华乃|日海|诗音|天梨|和泉里|广梦|莉莉子]说
 - 让[莲华|雾枝|雫|亚璃子|灯露椎|夕莉]说
 - 让[xcw]说
 - 让[优妮|切噜|华哥]说
-- 让[佩可|可可萝|凯露|雪菲]说
-（上述pcr角色支持昵称）
+- 让[佩可|可可萝|凯露|雪菲|爱梅斯|惠理子|初音|日和|镜华|美空]说
+- 让[桃井|伊吕波|未花|美游|花凛|明日奈|梓|爱丽丝|
+    白子|星野|日奈|伊织|泉奈|优香|阿罗那|小春|日富美]说
+- 让[黑塔|卡夫卡]说
+（上述pcr和ba角色支持昵称）
 '''.strip()
 
 sv = Service(
@@ -57,7 +60,6 @@ voice_dic = {
   "散兵", "女士", "达达利亚", "莫娜", "班尼特", "申鹤",
   "行秋", "烟绯", "久岐忍", "辛焱", "砂糖", "胡桃", "重云",
   "菲谢尔", "诺艾尔", "迪奥娜", "鹿野院平藏"],
-"XCW" : ['xcw', '小仓唯', '镜华'],
 "Friend" : {
     "0" : ["优妮", "ユニ", "Yuni", "u2", "优妮辈先", "辈先", "书记", "uni"],
     "1" : ["琪爱儿","チエル","Chieru","切露","茄露","茄噜","切噜"], 
@@ -80,7 +82,7 @@ voice_dic = {
      '丛雨': 'ムラサメ', '小春': '鞍馬小春', '七海': '在原七海'},
     'zero': {},
     'sora': {'穹': '春日野穹', '瑛': '天女目瑛', '奈绪': '依媛奈緒', '一叶': '渚一葉'},
-    'dracu': {'美羽': '矢来美羽', '梓': '布良梓', '艾莉娜': 'エリナ', '莉音': '稲丛莉音', 
+    'dracu': {'美羽': '矢来美羽', '布良梓': '布良梓', '艾莉娜': 'エリナ', '莉音': '稲丛莉音', 
     '尼古拉': 'ニコラ', '小夜': '荒神小夜', '夕里': '大房ひよ里', '萌香': '淡路萌香', 
     '安娜': 'アンナ', '直太': '倉端直太', '兵马': '枡形兵馬', '元树': '扇元樹'},
     'stella': {'夏目': '四季ナツメ', '栞那': '明月栞那', '希': '墨染希', '爱衣': '火打谷愛衣', 
@@ -88,21 +90,49 @@ voice_dic = {
     'mangekyo': {'莲华': '蓮華', '雾枝': '篝ノ霧枝', '雫': '沢渡雫', '灯露椎': '灯露椎',
      '夕莉': '覡夕莉'},
     'hamidashi': {'姬爱': '和泉妃愛', '华乃': '常盤華乃', '日海': '錦あすみ', '诗音': '鎌倉詩桜', 
-    '天梨': '竜閑天梨', '和泉里': '和泉里', '广梦': '新川広夢', '莉莉子': '聖莉々子'}
-}
+    '天梨': '竜閑天梨', '和泉里': '和泉里', '广梦': '新川広夢', '莉莉子': '聖莉々子'}},    
+"BA" : {
+    "momoi": ["momoi","才羽桃井","桃井","小桃"],
+    "iroha": ["iroha","枣伊吕波","伊吕波","168"],
+    "mika":  ["mika", "圣园未花","未花"],
+    "miyu": ["miyu","霞泽美游","美游"],
+	"karin": ["karin","角楯花凛","花凛"],
+	"asuna": ["asuna","一之濑明日奈","明日奈"],
+	"azusa": ["azusa","白洲梓","梓","小梓"],
+	"alice": ["alice","天童爱丽丝","爱丽丝","女儿"],
+	"shiroko": ["shiroko","砂狼白子","白子","悍匪"],
+	"hoshino": ["hoshino","小鸟游星野","星野","大叔"],
+	"hina": ["hina","空崎日奈","日奈","阳奈","大老婆"],
+	"iori": ["iori","银镜伊织","伊织","佐仓","佐三枪"],
+	"izuna": ["izuna","久田泉奈","泉奈","小狐狸"],
+	"yuuka": ["yuuka","早濑优香","优香","邮箱","没包人"],
+    "arona": ["arona","阿罗那","阿罗娜"],
+    "koharu": ["koharu","小春"],
+    "hifumi": ["hifumi","日富美"]
+    },
+    "PCR": {
+        "ameth": ["ameth","爱梅斯","爱美斯"],
+        "eriko": ["eriko","惠理子","病娇"],
+        "hatsune": ["hatsune","初音","星法","星星法","⭐法","睡法"],
+        "herta": ["herta","黑塔"],
+        "kafka": ["kafka","卡夫卡"],
+        "hiyori": ["hiyori","日和","日和莉","猫拳","🐱👊"],
+        "kyoka": ["kyoka","冰川镜华","xcw","镜华",'小仓唯'],
+        "misora": ["misora","美空"],
+    }
 }
 
 KR = [i for i in voice_dic["KR"]]
 CN = voice_dic["CN"]
-XCW = voice_dic["XCW"]
 Friend = [j for i in voice_dic["Friend"].values() for j in i]
 Meishi = [j for i in voice_dic["Meishi"].values() for j in i]
 JP = [j for i in voice_dic["JP"].values() for j in i]
-ALL = KR + CN + Friend + JP + XCW + Meishi
+BA = [j for i in voice_dic["BA"].values() for j in i]
+PCR = [j for i in voice_dic["PCR"].values() for j in i]
+ALL = KR + CN + Friend + JP + Meishi + BA + PCR
 
 MoeGoeAPI = 'https://moegoe.azurewebsites.net/api/'
 VoiceAPI = 'http://106.53.138.218:6321/api/voice'
-XcwAPI = 'http://prts.tencentbot.top/0/'
 TranslateAPI = 'https://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule'
 
 dir_path = os.path.dirname(__file__)
@@ -132,6 +162,26 @@ async def voiceApi(api: str, params: Union[str, dict] = None) -> str:
     return 'base64://' + base64.b64encode(data).decode()
 
 
+@sv.on_prefix(["n让" + i + '说' for i in Meishi])
+async def voice(bot: NoneBot, ev: CQEvent):
+
+    text: str = ev.message.extract_plain_text().strip()
+    if not text:
+        await bot.finish(ev, '请输入需要合成语音的文本', at_sender=True)
+    id: str = ev.get('prefix')[2:-1]
+    jap = re.compile(r'[\u3040-\u309F\u30A0-\u30FF]') 
+    krr = re.compile(r'[\uAC00-\uD7A3]') 
+    if not jap.search(text):
+        text = await translate(text,'ja')
+    index = await get_key(voice_dic['Meishi'], id)
+    text = await get_moegoe(int(index), text, 3) 
+    if text == "Successful":
+        voice = f'file:///{save_path}'
+    
+    data = MessageSegment.record(voice)
+
+    await bot.send(ev, data)
+
 @sv.on_prefix(["让" + i + '说' for i in ALL])
 async def voice(bot: NoneBot, ev: CQEvent):
 
@@ -141,15 +191,11 @@ async def voice(bot: NoneBot, ev: CQEvent):
     id: str = ev.get('prefix')[1:-1]
     jap = re.compile(r'[\u3040-\u309F\u30A0-\u30FF]') 
     krr = re.compile(r'[\uAC00-\uD7A3]') 
-    if id in XCW:
-        if not jap.search(text):
-            text = await translate(text,'ja')
-        voice = await voiceApi(XcwAPI + text)
-    elif id in CN:
+    if id in CN:
         for i, t in enumerate(CN):
             if t == id:
                 index = i
-        text = await get_moegoe(int(index), text, 2) 
+        text = await get_moegoe(int(index), text, "genshin") 
         if text == "Successful":
             voice = f'file:///{save_path}'
     
@@ -167,21 +213,32 @@ async def voice(bot: NoneBot, ev: CQEvent):
         if not jap.search(text):
             text = await translate(text,'ja')
         index = await get_key(voice_dic['Friend'], id)
-        text = await get_moegoe(int(index), text, 1) 
+        text = await get_moegoe(int(index), text, "haopengyou") 
+        if text == "Successful":
+            voice = f'file:///{save_path}'
+    elif id in BA:
+        if not jap.search(text):
+            text = await translate(text,'ja')
+        index = await get_key(voice_dic['BA'], id)
+        text = await get_moegoe(0, text, str(index))
+        if text == "Successful":
+            voice = f'file:///{save_path}'
+    elif id in PCR:
+        if not jap.search(text):
+            text = await translate(text,'ja')
+        index = await get_key(voice_dic['PCR'], id)
+        text = await get_moegoe(0, text, str(index))
         if text == "Successful":
             voice = f'file:///{save_path}'
     elif id in Meishi:
         if not jap.search(text):
             text = await translate(text,'ja')
         index = await get_key(voice_dic['Meishi'], id)
-        text = await get_moegoe(int(index), text, 0) 
+        text = await get_moegoe(int(index), text, "meishi") 
         if text == "Successful":
             voice = f'file:///{save_path}'
     
     data = MessageSegment.record(voice)
-
-        #data = f'发生错误：{e}'
-        #sv.logger.error(data)
 
     await bot.send(ev, data)
 
